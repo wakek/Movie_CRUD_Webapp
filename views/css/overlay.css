@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+* {
+    box-sizing: border-box
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* opacity: 0.5; */
+    /* Black background with opacity */
+    z-index: 7;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    margin-top: -280px;
+    left: 0;
+    width: 100%;
+}
+
+#wrapper #container {
+    width: 100vh;
+    height: 70vh;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* background: #2F1E27; */
+    background: -webkit-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* W3C */
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#card {
+    color: white;
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+#card #title {
+    text-align: center;
+    color: black;
+    background: white;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 58px;
+    padding: 10px 0px;
+}
+
+#card input {
+    display: inline-block;
+}
+
+#card label {
+    font-family: 'Lato', sans-serif;
+}
+
+#card #movie_cover:hover {
+    cursor: pointer;
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+}
+
+.inp .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #07f;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+
+.inp input,
+textarea {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #c8ccd4;
+    background: none !important;
+    border-radius: 0;
+    color: #6b7a9b;
+    transition: all 0.15s ease;
+}
+
+.inp input:hover,
+textarea:hover {
+    background: rgba(34, 50, 84, 0.03);
+}
+
+.inp input:not(:placeholder-shown)+span,
+textarea:not(:placeholder-shown)+span {
+    color: #5a667f;
+    transform: translateY(-35px) scale(0.75);
+}
+
+.inp input:focus,
+textarea:focus {
+    background: none;
+    outline: none;
+}
+
+.inp input:focus+span,
+textarea:focus+span {
+    color: white;
+    transform: translateY(-35px) scale(0.75);
+}
+
+.inp input:focus+span+.border,
+textarea:focus+span+.border {
+    transform: scaleX(1);
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.submit_btn {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.submit_btn:hover {
+    color: black !important;
+    background-color: #FFFFFF;
+}

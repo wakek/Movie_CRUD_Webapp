@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    /* background: #2F1E27; */
+    background: -webkit-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #200122 10%, #6f0000 90%) !important;
+    /* W3C */
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased
+}
+
+.pagination_div {
+    margin: 30px 200px;
+    text-align: center;
+    color: white;
+}
+
+.button-gradient {
+    color: whitesmoke;
+    /* background: #2F1E27; */
+    background: -webkit-linear-gradient(90deg, #DA4453 10%, #89216B 90%) !important;
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #DA4453 10%, #89216B 90%) !important;
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #DA4453 10%, #89216B 90%) !important;
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #DA4453 10%, #89216B 90%) !important;
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #DA4453 10%, #89216B 90%) !important;
+    /* W3C */
+}
+
+#add_btn_div {
+    text-align: center;
+}
+
+#add_btn_div a {
+    display: inline-block;
+    border-radius: 20px;
+}

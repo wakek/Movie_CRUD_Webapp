@@ -22,9 +22,9 @@
             $this->movie_genre = $movie_genre;
             $this->movie_cover = $movie_cover;
             try {
-                $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USERNAME, DB_PASSWORD);
+                $this->conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USERNAME, DB_PASSWORD);
                 // set the PDO error mode to exception
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e){
                 echo "Error: " . $e->getMessage() . "<br/>";
             }
@@ -90,7 +90,7 @@
             if ($stmnt->rowCount()) {
                 return $stmnt->fetchAll();
             }
-            return "Empty query result";
+            return "Empty query result.";
         }
 
         function update($m_id = 'none')
@@ -124,7 +124,7 @@
                 $m_id = $this->id;
             }
             $stmt = $this->conn->prepare($this->delete_stmnt);
-            $stmt->bindParam(':Movie_ID', $this->id);
+            $stmt->bindParam(':Movie_ID', $m_id);
 
             try {
                 $res = $stmt->execute();
