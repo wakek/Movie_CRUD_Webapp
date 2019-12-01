@@ -10,7 +10,7 @@
             
             <form form id="update_movie_form" action="controllers/movie_controller.php" enctype="multipart/form-data" method="POST">
                 <input name="update_movie" id="update_movie" type="hidden" value="">
-                <?php echo '<input name="m_id" id="m_id" type=hidden value="'.$_POST['movie_id'].'" />'; ?>
+                <?php echo '<input name="movie_id" id="m_id" type=hidden value="'.$_POST['movie_id'].'" />'; ?>
                 <label for="movie_title" class="inp">
                     <?php echo '<input name="movie_title" id="movie_title" placeholder="&nbsp" type="text" value="'.$_POST['movie_title'].'" required />'; ?>
                     <!-- <input name="movie_title" id="movie_title" placeholder="&nbsp" type="text" required /> -->
@@ -68,6 +68,7 @@
     });
 
     $("#update_movie_final").click(function() {
+        let movie_id = $("#m_id").val();
         let movie_title = $("#movie_title").val();
         let movie_genre = $("#movie_genre").val();
         let movie_about = $("#movie_about").val();
